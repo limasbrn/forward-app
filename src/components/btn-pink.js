@@ -5,7 +5,7 @@ function PinkBtn(props) {
 
     return(
         <React.Fragment>
-            <button className="flex w-[200px] h-[40px] text-white text-[14px] bg-[#B0A7A6] rounded-[30px] items-center justify-center mb-[15px]" {...restProps}>{props.name}</button>
+            <button className="flex w-[200px] h-[40px] text-white text-[14px] bg-[#B0A7A6] rounded-[30px] items-center justify-center mb-[15px] font-medium text-[16px]" {...restProps}>{props.name}</button>
         </React.Fragment>
     )
 

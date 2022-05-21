@@ -29,9 +29,6 @@ const InicialPage = () => {
           </Link>
         </div>
 
-        <h3 className="text-[#B0A7A6] text-[14px] font-bold">
-          Created by Sabrina Silva
-        </h3>
       </div>
     </section>
   );
