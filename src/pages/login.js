@@ -16,8 +16,10 @@ const LoginPage = () => {
                </div>
             </Link>
             <TitleSub title="Login" subtitle="Nice to see you again!"/>
-            <InputEmail/>
-            <PassLogin/>
+            <form>
+                <InputEmail/>
+                <PassLogin/>
+            </form>
             <BlueBtn name="Login"/>
             <Redirect frase="Dont't have an account?"/>
             <Link to="/register"><span className="text-[#EF3851] text-[14px] font-bold">Sign up</span></Link>
