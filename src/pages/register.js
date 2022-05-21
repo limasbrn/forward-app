@@ -11,59 +11,52 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 
 const RegisterPage = () => {
-  const [infos, setInfos] = useState([]);
+  const [httpErrors, setHttpErrors] = useState();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(userValidation) });
 
-  const createUser = async (data) => {
-    let formData = {
-      name: data.name,
-      email: data.email,
-      password: data.password,
-    };
-
+  const createUser = async (formData) => {
     const isValid = await userValidation.isValid(formData);
 
     if (isValid) {
-      fetchData(formData);
+      try {
+        const response = await fetch("http://localhost:4000/user/cadaster", {
+          headers: { "Content-Type": "application/json" },
+          method: "POST",
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (data.ok === true)
+          setHttpErrors("Well done you created your account!");
+        if (data.ok === false) setHttpErrors("This user already exist!");
+      } catch (errors) {}
     }
   };
 
-  const fetchData = (data) => {
-    fetch("localhost:4000/user/cadaster", {data})
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        const transformInfo = data.results.map((registerData) => {
-          return {
-            name: registerData.name,
-            email: registerData.email,
-            password: registerData.password,
-          };
-        });
-        setInfos(transformInfo);
-      });
-  };
-
   return (
-    <section className="flex flex-col w-full h-full bg-[#EFEFEF] justify-center items-center">
+    <section className="flex flex-col w-full h-full justify-center items-center">
       <div className="flex w-[80%] h-[70px] justify-start items-center">
         <Link to="/">
           <img className="w-[30px] h-auto" alt="" src={setaVector} />
         </Link>
       </div>
 
-      <div className="flex flex-col w-[80%] h-[100px] bg-red-100 justify-center items-center">
+      <div className="flex flex-col w-[80%] h-[100px] justify-center items-center">
         <h1 className="flex text-center text-[#343E48] text-[25px] font-bold">
           Register
         </h1>
         <span className="flex text-center font-medium text-[#868686] text-[14px]">
           Create an account and be part of our community!
         </span>
+        <h2 id="mensagem-server" className="font-semibold text-[#343E48]">
+          {httpErrors}
+        </h2>
       </div>
 
       <form onSubmit={handleSubmit(createUser)}>
@@ -97,7 +90,7 @@ const RegisterPage = () => {
         </Link>
       </div>
 
-      <div className="flex w-[80%] h-[60px] bg-green-100 items-end justify-center">
+      <div className="flex w-[80%] h-[60px] items-end justify-center">
         <span className="text-[#EF3851] text-[14px] font-semibold">
           Forward &copy; copyright 2022
         </span>
