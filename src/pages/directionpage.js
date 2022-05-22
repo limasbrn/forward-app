@@ -48,8 +48,14 @@ const InicialPage = () => {
         </div>
         </div>
        
+        <div className="flex w-[80%] h-[45px] items-end justify-center mb-[15px]">
+          <span className="text-[#6A1BCD] text-[14px] font-semibold">
+          Forward &copy; copyright 2022
+          </span>
+        </div>
 
       </div>
+     
     </section>
   );
 };
