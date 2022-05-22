@@ -47,52 +47,56 @@ const RegisterPage = () => {
         </Link>
       </div>
 
-      <div className="flex flex-col w-[80%] h-[100px] justify-center items-center">
-        <h1 className="flex text-center text-[#343E48] text-[25px] font-bold">
-          Register
-        </h1>
-        <span className="flex text-center font-medium text-[#868686] text-[14px]">
-          Create an account and be part of our community!
-        </span>
-        <h2 id="mensagem-server" className="font-semibold text-[#343E48]">
-          {httpErrors}
-        </h2>
-      </div>
-
-      <form onSubmit={handleSubmit(createUser)}>
-        <h2 className="font-semibold text-[#343E48] mt-[20px]">Name</h2>
-
-        <UserName {...register("name")} />
-        <p className="font-semibold text-[#EF3851]">{errors.name?.message}</p>
-
-        <h2 className="font-semibold text-[#343E48] mt-[20px]">E-mail</h2>
-        <InputEmail {...register("email")}/>
-        <p className="font-semibold text-[#EF3851]">{errors.email?.message}</p>
-
-        <h2 className="font-semibold text-[#343E48] mt-[20px]">Password</h2>
-        <PassLogin {...register("password")} />
-        <p className="font-semibold text-[#EF3851]">
-          {errors.password?.message}
-        </p>
-
-        <div className="flex w-full h-[100px] justify-center items-center mt-[20px]mb-[20px]">
-          <BlueBtn name="Sign up" />
-        </div>
-      </form>
-
-      <div className="flex flex-row h-[50px] w-[80%] justify-center">
-        <span className=" font-semibold text-[16px] text-[#868686]">
-          Already have an account?
-        </span>
-        <Link to="/login">
-          <span className="text-[#EF3851] text-[16px] font-semibold">
-          &nbsp; Sign in
+      <div className=" flex flex-col md:w-[400px] md:h-[550px] md:border-[1px] md:border-[#DADADA] rounded-[5px] justify-center align-center items-center">
+        <div className="flex flex-col w-[80%] h-[100px] justify-center items-center">
+          <h1 className="flex text-center text-[#343E48] text-[25px] font-bold">
+            Register
+          </h1>
+          <span className="flex text-center font-medium text-[#868686] text-[14px]">
+            Create an account and be part of our community!
           </span>
-        </Link>
+          <h2 id="mensagem-server" className="font-semibold text-[#343E48]">
+            {httpErrors}
+          </h2>
+        </div>
+
+        <form onSubmit={handleSubmit(createUser)}>
+          <h2 className="font-semibold text-[#343E48] mt-[20px]">Name</h2>
+
+          <UserName {...register("name")} />
+          <p className="font-semibold text-[#6A1BCD]">{errors.name?.message}</p>
+
+          <h2 className="font-semibold text-[#343E48] mt-[20px]">E-mail</h2>
+          <InputEmail {...register("email")} />
+          <p className="font-semibold text-[#6A1BCD]">
+            {errors.email?.message}
+          </p>
+
+          <h2 className="font-semibold text-[#343E48] mt-[20px]">Password</h2>
+          <PassLogin {...register("password")} />
+          <p className="font-semibold text-[#6A1BCD]">
+            {errors.password?.message}
+          </p>
+
+          <div className="flex w-full h-[100px] justify-center items-center mt-[20px]mb-[20px]">
+            <BlueBtn name="Sign up" />
+          </div>
+        </form>
+
+        <div className="flex flex-row h-[50px] w-[80%] justify-center">
+          <span className=" font-semibold text-[16px] text-[#868686]">
+            Already have an account?
+          </span>
+          <Link to="/login">
+            <span className="text-[#6A1BCD] text-[16px] font-semibold">
+              &nbsp; Sign in
+            </span>
+          </Link>
+        </div>
       </div>
 
       <div className="flex w-[80%] h-[45px] items-end justify-center">
-        <span className="text-[#EF3851] text-[14px] font-semibold">
+        <span className="text-[#6A1BCD] text-[14px] font-semibold">
           Forward &copy; copyright 2022
         </span>
       </div>
