@@ -61,11 +61,12 @@ const RegisterPage = () => {
 
       <form onSubmit={handleSubmit(createUser)}>
         <h2 className="font-semibold text-[#343E48] mt-[20px]">Name</h2>
-        <UserName {...register("name")} placeholder="User name" />
+
+        <UserName {...register("name")} />
         <p className="font-semibold text-[#EF3851]">{errors.name?.message}</p>
 
         <h2 className="font-semibold text-[#343E48] mt-[20px]">E-mail</h2>
-        <InputEmail {...register("email")} />
+        <InputEmail {...register("email")}/>
         <p className="font-semibold text-[#EF3851]">{errors.email?.message}</p>
 
         <h2 className="font-semibold text-[#343E48] mt-[20px]">Password</h2>
@@ -80,17 +81,17 @@ const RegisterPage = () => {
       </form>
 
       <div className="flex flex-row h-[50px] w-[80%] justify-center">
-        <span className=" font-semibold text-[14px] text-[#868686]">
+        <span className=" font-semibold text-[16px] text-[#868686]">
           Already have an account?
         </span>
         <Link to="/login">
-          <span className="text-[#EF3851] text-[14px] font-semibold">
-            Sign in
+          <span className="text-[#EF3851] text-[16px] font-semibold">
+          &nbsp; Sign in
           </span>
         </Link>
       </div>
 
-      <div className="flex w-[80%] h-[60px] items-end justify-center">
+      <div className="flex w-[80%] h-[45px] items-end justify-center">
         <span className="text-[#EF3851] text-[14px] font-semibold">
           Forward &copy; copyright 2022
         </span>

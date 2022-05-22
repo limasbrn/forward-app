@@ -82,12 +82,12 @@ const LoginPage = () => {
       </form>
 
       <div className="flex flex-row h-[50px] w-[80%] justify-center">
-        <span className=" font-semibold text-[14px] text-[#868686]">
+        <span className=" font-semibold text-[16px] text-[#868686]">
           Dont't have an account?
         </span>
         <Link to="/register">
-          <span className="text-[#EF3851] text-[14px] font-semibold">
-            Sign up
+          <span className="text-[#EF3851] text-[16px] font-semibold">
+          &nbsp; Sign up
           </span>
         </Link>
       </div>

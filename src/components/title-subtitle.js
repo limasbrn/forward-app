@@ -2,7 +2,7 @@ import React from "react";
 
 function TitleSub(props) {
   return (
-    <section className="flex w-full h-[100px] justify-center items-center">
+    <section className="flex w-full md:w-[400px] h-[100px] justify-center items-center">
       <div className="flex flex-col w-[80%] justify-center items-center">
         <h1 className="flex text-center text-[#343E48] text-[25px] font-bold">
           {props.title}
