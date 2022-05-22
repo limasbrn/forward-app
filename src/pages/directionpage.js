@@ -29,7 +29,7 @@ const InicialPage = () => {
           <div className=" flex flex-col md:w-[400px] md:h-[300px] md:border-[1px] md:border-[#DADADA] rounded-[5px] justify-center align-center">
            <TitleSub
             title="Hello!"
-            subtitle="Forward is a place were good practices of consume are encouraged. Login to go forward!"
+            subtitle="Forward is an online thrift store, a place were good practices of consume are encouraged. Login to go forward!"
           />
             <div className="flex w-full h-auto  justify-center items-center mt-[15px]">
             <Link to="/login">
