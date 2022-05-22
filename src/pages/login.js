@@ -43,6 +43,7 @@ const LoginPage = () => {
 
   return (
     <section className="flex flex-col w-full h-full justify-center items-center">
+      
       <div className="flex w-[80%] h-[70px] justify-start items-center">
         <Link to="/">
           <img className="w-[30px] h-auto" alt="" src={setaVector} />
@@ -50,6 +51,7 @@ const LoginPage = () => {
       </div>
 
       <div className=" flex flex-col md:w-[400px] md:h-[500px] md:border-[1px] md:border-[#DADADA] rounded-[5px] justify-center align-center items-center">
+
         <div className="flex flex-col w-[80%] h-[100px]  justify-center items-center">
           <h1 className="flex text-center text-[#343E48] text-[25px] font-bold">
             Login
@@ -96,6 +98,7 @@ const LoginPage = () => {
           Forward &copy; copyright 2022
         </span>
       </div>
+
     </section>
   );
 };
