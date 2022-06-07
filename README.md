@@ -2,14 +2,14 @@
 
 # Forward App
 
-#Informações gerais
+# Informações gerais
 
 Pequena aplicação contendo página de login e cadastro. 
 
 ## Tecnologias utilizadas
 
-*React js;
-*Yup;
-*Tailwind;
+* React js;
+* Yup;
+* Tailwind;
 
 
