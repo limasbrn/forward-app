@@ -12,4 +12,20 @@ Aplicação desenvolvida em ReactJs constituída de uma página de Cadastro com 
 * Yup;
 * Tailwind;
 
+## Setup
 
+Para a visualização da aplicação é necessário:
+
+* Clonar o repositório usando o HTTP ou usando uma chave SSH;
+* Abrir o Git Bash;
+* Abrir o diretório onde deseja ter o repositório que clonou;
+* E utilizando o comando $ git clone colar o URL que foi copiado;
+
+```
+$ git clone https://github.com/limasbrn/forward-app.git
+```
+E logo em seguida fazer as devidas instalações e rodar o projeto no navegador:
+```
+$ npm install
+$ npm start
+```
