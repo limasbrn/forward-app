@@ -8,9 +8,9 @@ Aplicação desenvolvida em ReactJs constituída de uma página de Cadastro com 
 
 ## Tecnologias utilizadas
 
-* React js;
-* Yup;
-* Tailwind;
+* React js ;
+* Yup ;
+* Tailwind ;
 
 ## Setup
 
