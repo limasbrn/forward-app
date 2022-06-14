@@ -4,7 +4,7 @@
 
 # Informações gerais
 
-Pequena aplicação contendo página de login e cadastro. 
+Aplicação desenvolvida em ReactJs constituída de uma página de Cadastro com validações dos dados inserido via Yup e uma página de login que confere se os dados inseridos foram dados como entrada na página de cadastro.
 
 ## Tecnologias utilizadas
 
